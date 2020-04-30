@@ -28,6 +28,6 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,17,0,0" Text="CoorDistance" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="ResultText" HorizontalAlignment="Center" Margin="0,182,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" IsReadOnly="True"/>
         <CheckBox x:Name="cbToggle" Content="Copy to Clipboard" HorizontalAlignment="Right" Margin="0,162,24.2,0" VerticalAlignment="Top" Checked="cbToggle_Checked" Unchecked="cbToggle_Unchecked"/>
-        <CheckBox x:Name="bToggle" Content="Contain in Brackets" HorizontalAlignment="Left" Margin="29,162,0,0" VerticalAlignment="Top" IsChecked="True" Checked="bToggle_Checked" Unchecked="bToggle_Unchecked"/>
+        <CheckBox x:Name="bToggle" Content="Contain in Brackets" HorizontalAlignment="Left" Margin="29,162,0,0" VerticalAlignment="Top" Checked="bToggle_Checked" Unchecked="bToggle_Unchecked"/>
     </Grid>
 </Window>
