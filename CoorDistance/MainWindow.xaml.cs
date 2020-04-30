@@ -23,6 +23,25 @@ namespace CoorDistance
         public MainWindow()
         {
             InitializeComponent();
+
+            // load settings
+            if (Properties.Settings.Default.bToggle == true)
+            {
+                bToggle.IsChecked = true;
+            }
+            else if (Properties.Settings.Default.bToggle == false)
+            {
+                bToggle.IsChecked = false;
+            }
+
+            if (Properties.Settings.Default.cbToggle == true)
+            {
+                cbToggle.IsChecked = true;
+            }
+            else if (Properties.Settings.Default.cbToggle == false)
+            {
+                cbToggle.IsChecked = false;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -51,14 +70,21 @@ namespace CoorDistance
                 xyz.Add(Math.Min(value,pos2[pos1.IndexOf(value)])); //Generates list of x,y,z coords.
                 dxyz.Add(distanceFormula(value, pos2[pos1.IndexOf(value)]));
             }
-            ResultText.Text = $"[x={xyz[0]},y={xyz[1]},z={xyz[2]},dx={dxyz[0]},dy={dxyz[1]},dz={dxyz[2]}]";
+            if (bToggle.IsChecked == true)
+            {
+                ResultText.Text = $"[x={xyz[0]},y={xyz[1]},z={xyz[2]},dx={dxyz[0]},dy={dxyz[1]},dz={dxyz[2]}]";
+            }
+            else if (bToggle.IsChecked == false)
+            {
+                ResultText.Text = $"x={xyz[0]},y={xyz[1]},z={xyz[2]},dx={dxyz[0]},dy={dxyz[1]},dz={dxyz[2]}";
+            }
             if (cbToggle.IsChecked == true)
             {
                 Clipboard.SetText(ResultText.Text);
             }
         }
 
-        public int distanceFormula(int pos1, int pos2)
+        static int distanceFormula(int pos1, int pos2)
         {
             return Convert.ToInt32(Math.Sqrt(Math.Pow(pos2 - pos1,2)));
         }
@@ -71,6 +97,30 @@ namespace CoorDistance
                 UseShellExecute = true
             };
             System.Diagnostics.Process.Start(psi);
+        }
+
+        private void bToggle_Checked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.bToggle = true;
+            Properties.Settings.Default.Save();
+        }
+
+        private void bToggle_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.bToggle = false;
+            Properties.Settings.Default.Save();
+        }
+
+        private void cbToggle_Checked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.cbToggle = true;
+            Properties.Settings.Default.Save();
+        }
+
+        private void cbToggle_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.cbToggle = false;
+            Properties.Settings.Default.Save();
         }
     }
 }

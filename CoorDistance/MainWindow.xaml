@@ -5,26 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoorDistance"
         mc:Ignorable="d"
-        Title="CoorDistance" Height="248" Width="322" WindowStyle="SingleBorderWindow">
-	<Grid>
-		<TextBlock x:Name="Pos2Text" Margin="0,39,84,0" Text="Pos 2" TextWrapping="NoWrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="31"/>
-		<Button x:Name="Credits" Content="Made by @InValidFire" FontSize="7" Background="Transparent" BorderThickness="0" IsTabStop="False" Click="Credits_Open" HorizontalAlignment="Center" Width="322" Height="12" VerticalAlignment="Top"/>
-		<TextBlock x:Name="Pos1XText" HorizontalAlignment="Left" Margin="29,62,0,0" Text="X" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<TextBlock x:Name="Pos1YText" HorizontalAlignment="Left" Margin="29,86,0,0" Text="Y" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<TextBlock x:Name="Pos1ZText" HorizontalAlignment="Left" Margin="29,110,0,0" Text="Z" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<TextBox x:Name="Pos1X" Margin="41,60,0,0" Text="" TextWrapping="Wrap" Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
-		<TextBox x:Name="Pos1Y" Margin="41,84,0,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Width="85" Height="19" VerticalAlignment="Top"/>
-		<TextBox x:Name="Pos1Z" Margin="41,108,0,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Width="85" Height="19" VerticalAlignment="Top"/>
-		<TextBox x:Name="Pos2X" Margin="0,60,42,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Right" Width="85" Height="19" VerticalAlignment="Top"/>
-		<TextBox x:Name="Pos2Y" Margin="0,84,42,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Right" Width="85" Height="19" VerticalAlignment="Top"/>
-		<TextBox x:Name="Pos2Z" Margin="0,108,42,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Right" Width="85" Height="19" VerticalAlignment="Top"/>
-		<TextBlock x:Name="Pos2XText" HorizontalAlignment="Right" Margin="0,62,132,0" Text="X" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<TextBlock x:Name="Pos2YText" HorizontalAlignment="Right" Margin="0,86,132,0" Text="Y" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<TextBlock x:Name="Pos2ZText" HorizontalAlignment="Right" Margin="0,111,132,0" Text="Z" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<TextBlock HorizontalAlignment="Left" Margin="55,39,0,0" Text="Pos 1" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Right" Margin="0,139,135,0" VerticalAlignment="Top" Click="Button_Click" IsDefault="True"/>
-		<TextBlock HorizontalAlignment="Center" Margin="0,17,0,0" Text="CoorDistance" TextWrapping="Wrap" VerticalAlignment="Top"/>
-		<TextBox x:Name="ResultText" HorizontalAlignment="Center" Margin="0,182,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" IsReadOnly="True"/>
-		<CheckBox x:Name="cbToggle" Content="Copy to Clipboard" HorizontalAlignment="Center" Margin="0,162,0,0" VerticalAlignment="Top"/>
-	</Grid>
+        Title="CoorDistance" Height="240" Width="330" WindowStyle="SingleBorderWindow"
+        MinWidth="330" 
+        MinHeight="240">
+    <Grid>
+        <TextBlock x:Name="Pos2Text" Margin="0,39,84,0" Text="Pos 2" TextWrapping="NoWrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="31"/>
+        <Button x:Name="Credits" Content="Made by @InValidFire" FontSize="7" Background="Transparent" BorderThickness="0" IsTabStop="False" Click="Credits_Open" HorizontalAlignment="Center" Width="322" Height="12" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Pos1XText" HorizontalAlignment="Left" Margin="29,62,0,0" Text="X" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Pos1YText" HorizontalAlignment="Left" Margin="29,86,0,0" Text="Y" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Pos1ZText" HorizontalAlignment="Left" Margin="29,110,0,0" Text="Z" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="Pos1X" Margin="41,60,0,0" Text="" TextWrapping="Wrap" Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
+        <TextBox x:Name="Pos1Y" Margin="41,84,0,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Width="85" Height="19" VerticalAlignment="Top"/>
+        <TextBox x:Name="Pos1Z" Margin="41,108,0,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Width="85" Height="19" VerticalAlignment="Top"/>
+        <TextBox x:Name="Pos2X" Margin="0,60,42,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Right" Width="85" Height="19" VerticalAlignment="Top"/>
+        <TextBox x:Name="Pos2Y" Margin="0,84,42,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Right" Width="85" Height="19" VerticalAlignment="Top"/>
+        <TextBox x:Name="Pos2Z" Margin="0,108,42,0" Text="" TextWrapping="Wrap" HorizontalAlignment="Right" Width="85" Height="19" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Pos2XText" HorizontalAlignment="Right" Margin="0,62,132,0" Text="X" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Pos2YText" HorizontalAlignment="Right" Margin="0,86,132,0" Text="Y" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Pos2ZText" HorizontalAlignment="Right" Margin="0,111,132,0" Text="Z" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="55,39,0,0" Text="Pos 1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="Calculate" Content="Calculate" Margin="131,138,131.6,0" Click="Button_Click" IsDefault="True" Height="19" VerticalAlignment="Top" HorizontalAlignment="Center" Width="51"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,17,0,0" Text="CoorDistance" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="ResultText" HorizontalAlignment="Center" Margin="0,182,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" IsReadOnly="True"/>
+        <CheckBox x:Name="cbToggle" Content="Copy to Clipboard" HorizontalAlignment="Right" Margin="0,162,24.2,0" VerticalAlignment="Top" Checked="cbToggle_Checked" Unchecked="cbToggle_Unchecked"/>
+        <CheckBox x:Name="bToggle" Content="Contain in Brackets" HorizontalAlignment="Left" Margin="29,162,0,0" VerticalAlignment="Top" IsChecked="True" Checked="bToggle_Checked" Unchecked="bToggle_Unchecked"/>
+    </Grid>
 </Window>
